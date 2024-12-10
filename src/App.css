@@ -1,0 +1,39 @@
+.square {
+	width: 100px; /* Ancho de cada cuadro */
+	height: 100px; /* Alto de cada cuadro (cuadrado perfecto) */
+	background-color: #f0f0f0; /* Color de fondo gris claro */
+	border: 2px solid #333; /* Bordes oscuros para definir la separación */
+	font-size: 2rem; /* Tamaño de la fuente grande para 'X' y 'O' */
+	font-weight: bold; /* Negrita para que la 'X' y la 'O' sean más visibles */
+	text-align: center; /* Centra el texto horizontalmente */
+	line-height: 100px; /* Centra el texto verticalmente (mismo que la altura) */
+	cursor: pointer; /* Cambia el cursor a pointer para indicar que se puede hacer clic */
+	transition: all 0.2s ease; /* Suaviza las transiciones (para efectos de hover) */
+}
+
+.square:hover {
+	background-color: #e0e0e0; /* Color de fondo más oscuro al pasar el mouse */
+}
+
+.square:active {
+	background-color: #d0d0d0; /* Color más oscuro mientras se hace clic */
+}
+
+.square.X {
+	color: #ff6347; /* Color de la X (puede ser rojo o cualquier color que quieras) */
+}
+
+.square.O {
+	color: #4682b4; /* Color de la O (puede ser azul o cualquier color que quieras) */
+}
+
+.board {
+	display: grid; /* Usamos Grid para crear la cuadrícula */
+	grid-template-columns: repeat(3, 100px); /* 3 columnas de 100px cada una */
+	grid-template-rows: repeat(3, 100px); /* 3 filas de 100px cada una */
+	gap: 2px; /* Espacio entre los cuadros (opcional) */
+	background-color: #333; /* Color de fondo oscuro para que se vean los bordes */
+	padding: 10px; /* Separación interior (opcional) */
+	border-radius: 10px; /* Bordes redondeados para dar estilo */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+}
